@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - 'c/**'
-      - 's/**'
+      - 'clash/**'
+      - 'surge/**'
 
 jobs:
   purge:
@@ -17,7 +17,7 @@ jobs:
 
       - name: Purge changed files
         run: |
-          files=$(git diff --name-only HEAD^ HEAD | grep -E '^(c|s)/' || true)
+          files=$(git diff --name-only HEAD^ HEAD | grep -E '^(clash|surge)/' || true)
           for f in $files; do
             [ -f "$f" ] || continue
             url="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$f"

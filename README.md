@@ -4,30 +4,30 @@ Personal rule sets, served via jsDelivr CDN.
 
 ## Subscription URLs
 
-### Clash (`c/` directory, YAML format)
+### Clash (`clash/` directory, YAML format)
 
 | Rule | URL |
 |------|-----|
-| Claude | `https://cdn.jsdelivr.net/gh/kpkym/rule@main/c/Claude.yaml` |
+| Claude | `https://cdn.jsdelivr.net/gh/kpkym/rule@main/clash/Claude.yaml` |
 
-### Surge (`s/` directory, list format)
+### Surge (`surge/` directory, list format)
 
 | Rule | URL |
 |------|-----|
-| Claude | `https://cdn.jsdelivr.net/gh/kpkym/rule@main/s/Claude.list` |
+| Claude | `https://cdn.jsdelivr.net/gh/kpkym/rule@main/surge/Claude.list` |
 
 ## Force refresh CDN
 
 A GitHub Action automatically purges the cache on push to `main`. You can also purge manually:
 
-- Clash: `https://purge.jsdelivr.net/gh/kpkym/rule@main/c/Claude.yaml`
-- Surge: `https://purge.jsdelivr.net/gh/kpkym/rule@main/s/Claude.list`
+- Clash: `https://purge.jsdelivr.net/gh/kpkym/rule@main/clash/Claude.yaml`
+- Surge: `https://purge.jsdelivr.net/gh/kpkym/rule@main/surge/Claude.list`
 
 Or with curl:
 
 ```bash
-curl https://purge.jsdelivr.net/gh/kpkym/rule@main/c/Claude.yaml
-curl https://purge.jsdelivr.net/gh/kpkym/rule@main/s/Claude.list
+curl https://purge.jsdelivr.net/gh/kpkym/rule@main/clash/Claude.yaml
+curl https://purge.jsdelivr.net/gh/kpkym/rule@main/surge/Claude.list
 ```
 
 ## Notes
